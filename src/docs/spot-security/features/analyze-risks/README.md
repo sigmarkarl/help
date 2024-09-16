@@ -16,14 +16,14 @@ The risk distribution at the top gives the total number of open and suppressed r
 
 For each rule, you can see the:
 
-* Security Rule Name
-* Severity  
-* Asset Type
-* Cloud
-* Compliance
-* Failed Assets
-* Suppressed Assets
-* Remediation Effort  
+- Security Rule Name
+- Severity
+- Asset Type
+- Cloud
+- Compliance
+- Failed Assets
+- Suppressed Assets
+- Remediation Effort
 
 <img src="/spot-security/_media/risk-analysis-1.png" />
 
@@ -41,22 +41,22 @@ Click a failed asset of an Asset Name in the Failed Asset column to view the Fai
 
 For each asset, you can see the:
 
-* Asset Name
-* Asset ID
-* Risk Attribute
-* Asset Type
-* Cloud Provider
-* Cloud Account ID
-* Open Since
-* First Discovered
-* Last Scanned
-* Remediation   
+- Asset Name
+- Asset ID
+- Risk Attribute
+- Asset Type
+- Cloud Provider
+- Cloud Account ID
+- Open Since
+- First Discovered
+- Last Scanned
+- Remediation
 
-Click an asset to view the Risk Details page. The Risk Details page provides you with risk maps and affected assets due to the failing rules and more.  
+Click an asset to view the Risk Details page. The Risk Details page provides you with risk maps and affected assets due to the failing rules and more.
 
-Click [Remediation Steps](spot-security/features/analyze-risks/remediate) to view a step by step guide of how to remediate the risk.   
+Click [Remediation Steps](spot-security/features/analyze-risks/remediate) to view a step by step guide of how to remediate the risk.
 
-### Suppress a Rule  
+### Suppress a Rule
 
 You can also accept a risk by selecting the check box near the Sevurity Rule Name and clicking Suppress in the Actions menu. This removes the risk from your list. You can suppress one or multiple rules.
 
@@ -64,20 +64,20 @@ You can also accept a risk by selecting the check box near the Sevurity Rule Nam
 
 You can also suppress specific assets for selected security rules by following these steps:
 
-1. Click the number of failed assets for the security rule name you want to view.  
-2. Select the asset name or names you want to suppress and click Suppress in the Actions menu on the top right.  
+1. Click the number of failed assets for the security rule name you want to view.
+2. Select the asset name or names you want to suppress and click Suppress in the Actions menu on the top right.
 
 <img src="/spot-security/_media/risk-analysis-5.png" />
 
-To view the suppressed rules:  
+To view the suppressed rules:
 
-* Click the Show Suppressed toggle in the Risk table.
+- Click the Show Suppressed toggle in the Risk table.
 
-To view the suppressed assets: 
+To view the suppressed assets:
 
-* Click Supressed Assets Column in the Risk Table **or** 
-* Click the Show Suppressed Assets toggle in the Failed Asset table. 
-
+- Click Supressed Assets Column in the Risk Table **or**
+- Click the Show Suppressed Assets toggle in the Failed Asset table.
 
 ## What’s Next?
+
 Learn more about how you can [remediate](spot-security/features/analyze-risks/remediate) your risks.

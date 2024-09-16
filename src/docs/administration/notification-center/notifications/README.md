@@ -23,12 +23,14 @@ A blue dot on the right indicates unread notifications. When you hover the curso
 ## Notification Types
 
 The preview panel shows the following types of notifications:
+
 - Spot notifications: These messages are sent from Spot by NetApp and may include announcements about new features or information about Spot products and services. Spot notifications are shaded and sticky, meaning that they are pinned to the top of the list for a certain time period. When that time period is up, the notification appears with all the other notifications.
 - Event notifications: These are messages about events in your system. The messages appear according to what you have configured in the Notification Policies page. Icons on the notifications indicate the severity of the issue and which product the notification relates to.
 
 ## On each notification preview
 
 In addition to a title and the first line of the notification, a preview can include:
+
 - Date the notification was sent
 - Resource link: For example, this could be the name of the relevant Elastigroup or Ocean cluster. Click on this link to view the detailed resource page.
 - Notification menu: Hover the cursor over the top right of the notification to see the three dots, and click the three dots to menu.

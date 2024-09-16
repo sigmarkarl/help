@@ -25,6 +25,7 @@ To edit the Group Name or Description, click the pencil icon at the top right.
 ### Manage Users
 
 The Users tab shows a listing of the users associated with the group. For each user, the table also indicates the user type, Programmatic or Console.
+
 1. To add or remove users from the group, click Manage.
 2. In the list of users, mark or unmark the user names.
 3. Click Update.
@@ -32,6 +33,7 @@ The Users tab shows a listing of the users associated with the group. For each u
 ### Manage Policies
 
 The Policies tab shows a listing of the policies associated with the group. For each policy, the table also indicates the policy type, (Organization, Account, Spot Managed), and the accounts that are associated with the policy.
+
 1. To add or remove policies from the group, click Manage.
 2. Select the name of the policy from the dropdown list. Note that the dropdown list doesn’t include the policies the user inherited from the groups. If you wish to remove an inherited policy, you must un-assign the user from the group or remove the policy from the group itself.
 3. If the policy is at account level, you need to select at least one account to associate with this policy.
@@ -41,6 +43,7 @@ In addition, you can review existing policies and detach any policy you no longe
 ## Remove Group
 
 To remove a group from Spot, do the following:
+
 1. In the upper right of the Group Details page, click Remove Group.
 2. In the popup that appears, confirm that you want to remove the group from Spot.
 

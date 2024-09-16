@@ -4,7 +4,7 @@
 
 ## Introduction
 
-You can update the RAM and CPU for an osDisk and dataDisk on a stateful node. 
+You can update the RAM and CPU for an osDisk and dataDisk on a stateful node.
 
 ## Instructions
 
@@ -21,5 +21,6 @@ You can also update the osDisk and dataDisk size in the stateful node’s JSON. 
 **RAM size**
 
 You can only update the RAM size in the Azure portal or change the VM sizes in your configuration to have a higher RAM:
-* https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/
-* https://learn.microsoft.com/en-us/answers/questions/679311/azure-vm-increase-decrease-ram-dinamically
+
+- https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/
+- https://learn.microsoft.com/en-us/answers/questions/679311/azure-vm-increase-decrease-ram-dinamically

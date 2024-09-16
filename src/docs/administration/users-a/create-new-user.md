@@ -1,6 +1,7 @@
 # Create New User
 
 Creating a new [user](administration/users-a/) consists of the following major steps:
+
 1. Define user details
 2. Choose Groups
 3. Choose Permission Policies
@@ -22,6 +23,7 @@ The Create New User wizard appears and displays the User Details page.
 ## User Details
 
 In the Create New User popup, complete the required information and then click Continue.
+
 - User Name: The name of the user or application that will use Spot.
 - User Type: Choose one of the following user types:
   - Console: The user is a person accessing the Spot console. If you choose this, enter the person’s Name and Email address.

@@ -41,7 +41,7 @@ A statement contains the following elements:
     {
       "effect": "ALLOW",
       "actions": ["elastigroup:describeAllGroups"],
-      "resources": ["*"],
+      "resources": ["*"]
     }
   ]
 }

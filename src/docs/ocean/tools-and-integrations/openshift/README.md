@@ -1,6 +1,6 @@
 # OpenShift
 
->**Note**: OpenShift integration is currently only supported for AWS.
+> **Note**: OpenShift integration is currently only supported for AWS.
 
 Red Hat OpenShift is an open-source container application platform for enterprise application development and deployment based on the Kubernetes container orchestrator.
 

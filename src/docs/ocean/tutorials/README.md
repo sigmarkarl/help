@@ -2,6 +2,5 @@
 
 This topic includes these dashboards:
 
-*  Ocean Overview Dashboard
-*  Ocean Cloud Cluster Overview Dashboard
-
+- Ocean Overview Dashboard
+- Ocean Cloud Cluster Overview Dashboard

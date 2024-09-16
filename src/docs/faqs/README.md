@@ -3,6 +3,7 @@
 <!----------------------------------general---------------------------------->
 
 ## General
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">How are running hours calculated in the Spot console and AWS?</summary>
 
@@ -11,8 +12,9 @@
 Running hours are calculated from the moment an instance is launched until it is <i>detached</i> and not <i>terminated</i>. AWS calculates the entire lifetime of the instance.
 
 Here are some reasons for large differences between the numbers in the Spot Console and AWS:
-* Groups of instances with long draining periods
-* Shutdown scripts with long grace periods
+
+- Groups of instances with long draining periods
+- Shutdown scripts with long grace periods
 
  </div>
 
@@ -21,7 +23,7 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 <!----------------------------------ocean---------------------------------->
 
 ## Ocean
- 
+
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
    <summary markdown="span" style="color:#7632FE; font-weight:600">Why does Ocean fail to update instance types?</summary>
 
@@ -30,6 +32,7 @@ Here are some reasons for large differences between the numbers in the Spot Cons
 You cannot update the instance types in the default virtual node group. For example, it’s not supported to remove <i>m4.large</i> and <i>m5.large</i>, add <i>m5d.xlarge</i> and <i>m6i.xlarge</i> to the default virtual node group, and then update the cluster.
 
 If you do, you’ll get this error:
+
 <pre><code>
 Launch spec ols-xxxxxxxx instance types are not a subset of ocean cluster
 </code></pre>
@@ -67,8 +70,8 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
    </code></pre>
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
-    * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
-    * [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
+   - [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+   - [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
 
 **Scenario 2: Stateful Node**
 
@@ -77,21 +80,22 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If create a new AMI, you can add IMDSv2 support using AWS CLI:
-     <pre><code>
-      aws ec2 register-image Let me know if there is anything else I can help you with.
-      --name my-image \
-      --root-device-name /dev/xvda \
-      --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
-      --imds-support v2.0
-      </code></pre>
 
-    * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      <pre><code>
-      aws ec2 modify-image-attribute \
-      --image-id ami-0123456789example \
-      --imds-support v2.0
-      </code></pre>
+   - If create a new AMI, you can add IMDSv2 support using AWS CLI:
+   <pre><code>
+    aws ec2 register-image Let me know if there is anything else I can help you with.
+    --name my-image \
+    --root-device-name /dev/xvda \
+    --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
+    --imds-support v2.0
+    </code></pre>
+
+   - If you use an existing AMI, you can add IMDSv2 using AWS CLI:
+     <pre><code>
+     aws ec2 modify-image-attribute \
+     --image-id ami-0123456789example \
+     --imds-support v2.0
+     </code></pre>
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
@@ -110,15 +114,15 @@ You have scaling up instances for your Elastigroup or Ocean clusters and you get
 
 If you have a block device that is mapped to a snapshot ID of an Elastigroup or Ocean cluster and the snapshot isn't available, you will get this error. This can happen if the snapshot is deleted.
 
- ![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
+![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
 
 If you have another snapshot, then you can use that snapshot ID for the block device mapping. If not, you can remove the snapshot ID, and then the instance is launched using the AMI information.
 
-* **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping?id=block-device-mapping) and update the snapshot ID.
+- **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping?id=block-device-mapping) and update the snapshot ID.
   ![cant-spin-instances-invalidsnapshot2](https://github.com/spotinst/help/assets/167069628/1893d6e9-1d98-4ac5-81e6-1f1ce7ccef2f)
 
-* **Ocean**: on the virtual node group you want to change, update the snapshot ID.
- ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
+- **Ocean**: on the virtual node group you want to change, update the snapshot ID.
+  ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
 
  </div>
 
@@ -153,6 +157,7 @@ Check the **portMappings: hostPort** value in the task/service defintion.
 Port mappings allow containers to access ports on the host container instances to send or receive traffic. This configuration can be found in the task definition. The hostPort value in port mapping is normally left blank or set to 0.
 
 Example:
+
 <pre><code class="lang-json">
       "portMappings": [
             {
@@ -175,9 +180,10 @@ You can have multiple containers defined in a single task definition. Check all 
 <div style="padding-left:16px">
 
 You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
-* **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
-* **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
-* **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
+
+- **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
+- **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
+- **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
 
 You can allow, [block](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=opt-out-of-machine-types), or [filter](https://docs.spot.io/ocean/tips-and-best-practices/manage-machine-types?id=select-instance-types-with-advanced-filters) instance types in the cluster configuration in <i>compute: instanceTypes</i> in the cluster’s JSON or using an API.
 
@@ -196,8 +202,8 @@ You can get this error when the group's device name (for Block Device Mapping) a
 
 <code>Can't Spin Spot Instance: Code: InvalidBlockDeviceMapping, Message: The device 'xvda' is used in more than one block-device mapping</code>
 
-* AMI - "deviceName": "xvda"
-* Group's configuration - "deviceName": "/dev/xvda"
+- AMI - "deviceName": "xvda"
+- Group's configuration - "deviceName": "/dev/xvda"
 
 Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the group's side. Go to **Actions** > **Edit Configuration** > **Review Tab** > **Switch to Json Edit format** > **Apply the changes and save**.
 
@@ -210,7 +216,7 @@ Change the device name from <code>xvda</code> to <code>/dev/xvda</code> on the g
 
 <div style="padding-left:16px">
 
-When you import Fargate services with more than 5 security groups, you get an error: 
+When you import Fargate services with more than 5 security groups, you get an error:
 
 <code>Failed to import Fargate services into Ocean. Please verify Spot IAM policy has the right permissions and try again.</code>
 
@@ -236,15 +242,17 @@ Reimport Fargate services with less than 5 security groups and choose only one s
 <a href="https://ec2spotworkshops.com/using_ec2_spot_instances_with_eks/070_selfmanagednodegroupswithspot/deployhandler.html">AWS node termination handler</a> is a DaemonSet pod that is deployed on each spot instance. It detects the instance termination notification signal so that there will be a graceful termination of any pod running on that node, drain from load balancers, and redeploy applications elsewhere in the cluster.
 
 AWS node termination handler makes sure that the Kubernetes control plane responds as it should to events that can cause EC2 instances to become unavailable. Some reasons EC2 instances may become unavailable include:
-* EC2 maintenance events
-* EC2 spot interruptions
-* ASG scale-in
-* ASG AZ rebalance
-* EC2 instance termination using the API or Console
+
+- EC2 maintenance events
+- EC2 spot interruptions
+- ASG scale-in
+- ASG AZ rebalance
+- EC2 instance termination using the API or Console
 
 If not handled, the application code may not stop gracefully, take longer to recover full availability, or accidentally schedule work to nodes going down.
 
 The workflow of the node termination handler DaemonSet is:
+
 1. Identify that a spot instance is being reclaimed.
 2. Use the 2-minute notification window to prepare the node for graceful termination.
 3. Taint the node and cordon it off to prevent new pods from being placed.
@@ -253,12 +261,13 @@ The workflow of the node termination handler DaemonSet is:
 
 Ocean does not conflict with aws-node-termination-handler. It is possible to install it, but using aws-node-termination-handler is not required. Ocean continuously analyzes how your containers use infrastructure, automatically scaling compute resources to maximize utilization and availability.
 Ocean ensures that the cluster resources are utilized and scales down underutilized nodes to optimize maximal cost.
- 
+
  </div>
 
  </details>
 
 <!----------------------------------elastigroup---------------------------------->
+
 ## Elastigroup
 
  <details style="background:#f2f2f2; padding:6px; margin:10px 0px 0px 0px">
@@ -286,8 +295,8 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
    </code></pre>
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
-    * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
-    * [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
+   - [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+   - [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
 
 **Scenario 2: Stateful Node**
 
@@ -296,21 +305,22 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If create a new AMI, you can add IMDSv2 support using AWS CLI:
-     <pre><code>
-      aws ec2 register-image Let me know if there is anything else I can help you with.
-      --name my-image \
-      --root-device-name /dev/xvda \
-      --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
-      --imds-support v2.0
-      </code></pre>
 
-    * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      <pre><code>
-      aws ec2 modify-image-attribute \
-      --image-id ami-0123456789example \
-      --imds-support v2.0
-      </code></pre>
+   - If create a new AMI, you can add IMDSv2 support using AWS CLI:
+   <pre><code>
+    aws ec2 register-image Let me know if there is anything else I can help you with.
+    --name my-image \
+    --root-device-name /dev/xvda \
+    --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
+    --imds-support v2.0
+    </code></pre>
+
+   - If you use an existing AMI, you can add IMDSv2 using AWS CLI:
+     <pre><code>
+     aws ec2 modify-image-attribute \
+     --image-id ami-0123456789example \
+     --imds-support v2.0
+     </code></pre>
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
 
@@ -329,15 +339,15 @@ You have scaling up instances for your Elastigroup or Ocean clusters and you get
 
 If you have a block device that is mapped to a snapshot ID of an Elastigroup or Ocean cluster and the snapshot isn't available, you will get this error. This can happen if the snapshot is deleted.
 
- ![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
+![cant-spin-instances-invalidsnapshot1](https://github.com/spotinst/help/assets/167069628/1010d3de-2932-4677-92ed-ed6c124fe9a6)
 
 If you have another snapshot, then you can use that snapshot ID for the block device mapping. If not, you can remove the snapshot ID, and then the instance is launched using the AMI information.
 
-* **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping?id=block-device-mapping) and update the snapshot ID.
+- **Elastigroup**: on the Elastigroup you want to change, [open the creation wizard](https://docs.spot.io/elastigroup/features/compute/block-device-mapping?id=block-device-mapping) and update the snapshot ID.
   ![cant-spin-instances-invalidsnapshot2](https://github.com/spotinst/help/assets/167069628/1893d6e9-1d98-4ac5-81e6-1f1ce7ccef2f)
 
-* **Ocean**: on the virtual node group you want to change, update the snapshot ID.
- ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
+- **Ocean**: on the virtual node group you want to change, update the snapshot ID.
+  ![cant-spin-instances-invalidsnapshot3](https://github.com/spotinst/help/assets/167069628/e4b1a3aa-8404-4877-afbc-50337d67953c)
 
  </div>
 
@@ -372,8 +382,8 @@ You can define metadata for autoscaling groups in AWS that gets imported when yo
    </code></pre>
 
 2. Apply these changes to the currently running instances so the clusters are restarted and have the new definitions:
-    * [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
-    * [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
+   - [Deploy an Elastigroup](https://docs.spot.io/elastigroup/tutorials/elastigroup-actions-menu/deploy-or-roll-elastigroup?id=deploy-an-elastigroup)
+   - [Roll an Ocean cluster](https://docs.spot.io/ocean/features/roll-gen)
 
 **Scenario 2: Stateful Node**
 
@@ -382,24 +392,25 @@ When a stateful managed node is imported from AWS, Spot creates an image from th
 You can use your own AMI and configure IMDSv2 on it. All instances launched after recycling will have IMDSv2 by default.
 
 1. Configure IMDSv2 on your AMI:
-    * If create a new AMI, you can add IMDSv2 support using AWS CLI:
-     <pre><code>
-      aws ec2 register-image Let me know if there is anything else I can help you with.
-      --name my-image \
-      --root-device-name /dev/xvda \
-      --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
-      --imds-support v2.0
-      </code></pre>
 
-    * If you use an existing AMI, you can add IMDSv2 using AWS CLI:
-      <pre><code>
-      aws ec2 modify-image-attribute \
-      --image-id ami-0123456789example \
-      --imds-support v2.0
-      </code></pre>
+   - If create a new AMI, you can add IMDSv2 support using AWS CLI:
+   <pre><code>
+    aws ec2 register-image Let me know if there is anything else I can help you with.
+    --name my-image \
+    --root-device-name /dev/xvda \
+    --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=snap-0123456789example} \
+    --imds-support v2.0
+    </code></pre>
+
+   - If you use an existing AMI, you can add IMDSv2 using AWS CLI:
+     <pre><code>
+     aws ec2 modify-image-attribute \
+     --image-id ami-0123456789example \
+     --imds-support v2.0
+     </code></pre>
 
 2. In the Spot console, [create a stateful node](https://docs.spot.io/managed-instance/getting-started/create-a-new-managed-instance) with the custom AMI.
-   
+
  </div>
 
  </details>

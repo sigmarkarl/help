@@ -8,9 +8,9 @@ Spot Storage is available to you (AWS users) with immediate, actionable insights
 
 ## Put Storage Optimization on Autopilot
 
-DevOps teams continually tune cloud infrastructure to meet application SLOs.  Storage is a key part of this equation to balance application speed and overall costs. Tuning storage is usually a manual and tedious process often left to optimize only after compute needs are handled first. Tuning throughput, IOPS, and capacity is some of the most time-consuming and sensitive work that most infrastructure teams face.
+DevOps teams continually tune cloud infrastructure to meet application SLOs. Storage is a key part of this equation to balance application speed and overall costs. Tuning storage is usually a manual and tedious process often left to optimize only after compute needs are handled first. Tuning throughput, IOPS, and capacity is some of the most time-consuming and sensitive work that most infrastructure teams face.
 
-With Spot Storage, DevOps teams now have a simple and reliable way to optimize storage without needing to spend time on manual research, configuration, and monitoring.  Spot Storage enables your teams to adapt quickly to changing application needs and new storage types.
+With Spot Storage, DevOps teams now have a simple and reliable way to optimize storage without needing to spend time on manual research, configuration, and monitoring. Spot Storage enables your teams to adapt quickly to changing application needs and new storage types.
 
 ## Reduce Costs – What You Can do Now
 

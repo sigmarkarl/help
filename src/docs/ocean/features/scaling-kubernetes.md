@@ -26,7 +26,7 @@ It may take a few moments before the created nodes join the Kubernetes cluster. 
 
 You may want to have multiple replicas of a pod running in the cluster, but ensure that each pod does not run on the same node as other replicas of itself. In order to distribute the replicas properly, you can set an anti-affinity across availability zones. The autoscaler will then automatically launch instances satisfying the pod requirements.
 
-Example: Anti-affinity across availability zones: 
+Example: Anti-affinity across availability zones:
 
 ```json
 spec:
@@ -47,11 +47,10 @@ spec:
 
 > **Tip**: In the [affinity syntax](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#resources-that-support-set-based-requirements), Ocean supports both `matchExpressions` and `matchLabels`.
 
-###  Scale Up According to Available IPs (EKS only)
+### Scale Up According to Available IPs (EKS only)
 
 When the Ocean Autoscaler needs to scale up an instance, it selects the Availability Zone and the included subnet with the most available IPv4 addresses. This avoids IP address exhaustion in a specific subnet and prevents scaling up a node in a subnet that does not have enough IP addresses.
 If all the subnets set for a Virtual Node Group run out of available IP addresses, scaling up is blocked, and the Spot Monitoring team will email you to request that you add more subnets to the Virtual Node Group.
-
 
 ### Support for Shielded GKE Nodes (GKE only)
 
@@ -66,7 +65,7 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 ### Scale Down Behavior
 
 - When scale down of a node is expected, Ocean utilizes a configurable draining timeout of at least 300 seconds. (This can be configured using the drainingTimeout parameter on the Ocean level). At this time, Ocean marks the node as unschedulable and evicts all pods running on the node.
-  - Ocean spreads out the evictions instead of just deleting the pods all at once.  All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
+  - Ocean spreads out the evictions instead of just deleting the pods all at once. All the pods that run on the nodes are spread across a 120 seconds period of time. For example, if there are 10 pods running on the nodes, one pod is evicted every 12 seconds.
   - If the eviction fails, Ocean has a retry mechanism that tries to evict the pods a few seconds later. If eviction still fails after one minute, Ocean forces deletion of the pod.
 - After the draining timeout has expired, Ocean terminates the node and removes any pods that were not successfully evicted.
 - Scale down will start only if no PDB is violated by removing the pods on the node. That is the default behavior. However, you could decide to ignore the PDB restriction during scale down. (Please contact the Support team to enable ignoring the restriction.) If ignoring PDB restriction is configured, the drain still occurs, and the spread described above provides a "best effort" to prevent violating the PDB.
@@ -79,6 +78,7 @@ Ocean proactively identifies underutilized nodes and [bin-packs](https://en.wiki
 Some workloads are not as resilient to instance replacements as others, so you may wish to prevent replacement of the nodes, while still getting the benefit of spot instance pricing. A good example of these cases are jobs or batch processes that need to finish their work without termination by the Ocean autoscaler.
 
 Ocean makes it easy to prevent scaling down of nodes running pods configured with one of the following labels:
+
 - spotinst.io/restrict-scale-down:true label – This label is a proprietary Spot label ([additional Spot labels](https://docs.spot.io/ocean/features/labels-and-taints?id=spot-labels)) and can be configured on a pod level. When configured, it instructs the Ocean autoscaler to prevent scaling down a node that runs any pod with this label specified.
 - cluster-autoscaler.kubernetes.io/safe-to-evict: false annotation – Cluster autoscaler annotation; works similarly to the restrict-scale-down label. Ocean supports the annotation to ensure easy migration from the cluster autoscaler to Ocean.
 
@@ -91,33 +91,33 @@ Once enabled, VNG nodes are treated as if all pods running have the restrict-sca
 
 ## Accelerated Scale Down (EKS and GKE)
 
-Accelerated Scale Down is an Ocean Autoscaler feature that enhances efficiency and cost-effectiveness in your Kubernetes clusters. This feature monitors your Ocean cluster for underutilized nodes and terminates those that are not necessary, so you are not paying for idle resources. 
+Accelerated Scale Down is an Ocean Autoscaler feature that enhances efficiency and cost-effectiveness in your Kubernetes clusters. This feature monitors your Ocean cluster for underutilized nodes and terminates those that are not necessary, so you are not paying for idle resources.
 
-Kubernetes dynamically scales resources based on demand. However, as workloads decrease, you may find your cluster with an excess of underutilized nodes. These idle resources incur unnecessary costs. 
+Kubernetes dynamically scales resources based on demand. However, as workloads decrease, you may find your cluster with an excess of underutilized nodes. These idle resources incur unnecessary costs.
 
-Accelerated Scale-Down significantly reduces the time regular scale-down processes take to scale down nodes. Once a node is identified as eligible for scale down, it is immediately scaled down by the Ocean Autoscaler, depending on a scale-down percentage parameter, `maxScaleDownPercentage`.  
+Accelerated Scale-Down significantly reduces the time regular scale-down processes take to scale down nodes. Once a node is identified as eligible for scale down, it is immediately scaled down by the Ocean Autoscaler, depending on a scale-down percentage parameter, `maxScaleDownPercentage`.
 
-`maxScaleDownPercentage` is the percentage out of the cluster nodes that can be simultaneously scaled down. You can set the maximum scale-down percentage from 1-100, 100% for maximum acceleration. 
+`maxScaleDownPercentage` is the percentage out of the cluster nodes that can be simultaneously scaled down. You can set the maximum scale-down percentage from 1-100, 100% for maximum acceleration.
 
-Use Accelerated Scale Down for: 
+Use Accelerated Scale Down for:
 
-*   Prioritizing cost optimization: Scale down resources in larger or more complex environments that do not require continuous operation, such as development and testing.  
+- Prioritizing cost optimization: Scale down resources in larger or more complex environments that do not require continuous operation, such as development and testing.
 
-*   Batch processing for short runs: Scale down remaining underutilized nodes after jobs with short run duration (such as every hour for 10-15 minutes) end. 
+- Batch processing for short runs: Scale down remaining underutilized nodes after jobs with short run duration (such as every hour for 10-15 minutes) end.
 
-*   Workload Balancing in CI / CD pipelines: For pipelines that involve workloads that are resource-intensive during specific stages, and less demanding during others, scale down resources during the lighter stages. 
+- Workload Balancing in CI / CD pipelines: For pipelines that involve workloads that are resource-intensive during specific stages, and less demanding during others, scale down resources during the lighter stages.
 
-*   Handling sudden drops in demand: Scale down resources when traffic decreases.  
+- Handling sudden drops in demand: Scale down resources when traffic decreases.
 
-### Configure Accelerated Scale Down 
+### Configure Accelerated Scale Down
 
 To configure Accelerated scale-down
 
-1.  Use the [Spot by NetApp API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster: 
+1.  Use the [Spot by NetApp API](https://docs.spot.io/api/#tag/Ocean-AWS/operation/OceanAWSClusterGet) to configure Accelerated Scale Down on the Ocean cluster:
 
-2.  Set `cluster.autoScaler.down.aggressiveScaleDown.isEnabled = true`. 
+2.  Set `cluster.autoScaler.down.aggressiveScaleDown.isEnabled = true`.
 
-3.  Optionally increase scale down further by increasing the maxScaleDownPercentage value up to 100%. 
+3.  Optionally increase scale down further by increasing the maxScaleDownPercentage value up to 100%.
 
 ## Headroom
 
@@ -181,9 +181,10 @@ All you need to do is to create a VNG with a Windows AMI and you are all set. (P
 There is a default configuration in AKS of maximum pods that can be scheduled on each node and this default number of pods can be adjusted.
 
 The feature is also available in Ocean in order to improve node utilization and bin packing. With Ocean, you can set a max pods per node parameter in the following different ways:
-* At the cluster level, so that all nodes have a unified configuration.
-* Per virtual Node Group, so that you can have different configurations for different workloads.
-If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
+
+- At the cluster level, so that all nodes have a unified configuration.
+- Per virtual Node Group, so that you can have different configurations for different workloads.
+  If you have already configured maximum pods per node on your AKS cluster, this configuration will be imported during the connection of the AKS cluster to Ocean.
 
 This feature is available via API on the [cluster level](https://docs.spot.io/api/#operation/oceanAKSClusterCreate) and the [VNG level](https://docs.spot.io/api/#operation/oceanAKSVirtualNodeGroupCreate).
 

@@ -29,7 +29,7 @@
     - [Cluster Orientation](ocean/features/cluster-orientation)
     - [Cost Analysis](ocean/features/cost-analysis)
       - [Analyze Your Costs](ocean/tutorials/analyze-your-costs)
-      - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)  
+      - [Create a Cost Analysis Filter](ocean/tutorials/create-a-cost-filter)
     - [Create a Cluster for GKE using Shared VPC](ocean/tutorials/create-cluster-gke-shared-vpc)
     - [Distribute by vCPU](ocean/features/distribute-vcpu)
     - [Elastic IP](ocean/features/elastic-ip)
@@ -105,6 +105,4 @@
     - [Prometheus](ocean/tools-and-integrations/prometheus/)
       - [Scrape Ocean Metrics](ocean/tools-and-integrations/prometheus/scrape)
   - [Troubleshooting](ocean/troubleshooting/)
-      - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)
- 
-      
+    - [Troubleshoot Unscheduled Pods](ocean/troubleshooting/troubleshoot-unscheduled-pods)

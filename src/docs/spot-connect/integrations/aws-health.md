@@ -1,124 +1,91 @@
 # AWS Health
 
-AWS Health Trigger Documentation 
+AWS Health Trigger Documentation
 
- 
+Webhooks are automated messages that applications send for notifications and alerts. They contain messages, or payloads which are sent to a unique URL.
 
-Webhooks are automated messages that applications send for notifications and alerts. They contain messages, or payloads which are sent to a unique URL. 
+AWS Health provides ongoing visibility into your resource performance and the availability of your AWS services. The AWS Health delivers alerts and notifications triggered by changes in the health of AWS resources.
 
-AWS Health provides ongoing visibility into your resource performance and the availability of your AWS services. The AWS Health delivers alerts and notifications triggered by changes in the health of AWS resources. 
+## Configure AWS Health Trigger
 
- 
+There are 3 steps we need to follow to configure AWS Health trigger node:
 
-## Configure AWS Health Trigger 
+Setup API Keys
 
-There are 3 steps we need to follow to configure AWS Health trigger node: 
+Create a workflow using AWS Health trigger node
 
-Setup API Keys 
+Create Amazon EventBridge API Destination
 
-Create a workflow using AWS Health trigger node 
-
-Create Amazon EventBridge API Destination 
-
- 
-
-Setup API Keys 
+Setup API Keys
 
 Go to Spot Connect → Select Settings in the left nav bar → Under Integrations tab → Go to the resource section and click API Keys → Click on Add New button → Provide API Key Name → Click on Save button
-  
 
+Create EventBridge API Destination
 
+Create EventBridge API Destination by creating a rule under Amazon EventBridge
 
- 
+Login to your AWS Management Console
 
-Create EventBridge API Destination 
+Open Amazon EventBridge console
 
-Create EventBridge API Destination by creating a rule under Amazon EventBridge 
+Open the Rules page and click Create rule
 
-Login to your AWS Management Console 
+Enter rule detail then click Next
 
-Open Amazon EventBridge console 
+Name: your rule name
 
-Open the Rules page and click Create rule 
+Event bus: default
 
-Enter rule detail then click Next 
+Select “Enable the rule on the selected event bus”
 
-Name: your rule name 
+Rule type: Rule with an event pattern
 
-Event bus: default 
+Build event pattern then click Next:
 
-Select “Enable the rule on the selected event bus” 
+Event source: AWS events or EventBridge partner events
 
-Rule type: Rule with an event pattern 
+Creation method: Use pattern form
 
- 
+Event pattern
 
-Build event pattern then click Next: 
+Event source: AWS services
 
-Event source: AWS events or EventBridge partner events 
+AWS service: Health
 
-Creation method: Use pattern form 
+Event type: All Events
 
-Event pattern 
+Select a target then click Next:
 
-Event source: AWS services 
+Target type: EventBridge API destination
 
-AWS service: Health 
+API destination: select an existing API destination or create a new one
 
-Event type: All Events 
+Name: API destination name
 
- 
+API destination endpoint: Workflow Webhook URL copied from Spot Connect AWS Health trigger node
 
- 
+HTTP method: POST
 
-Select a target then click Next: 
+Connection type: select an existing connection or create a new one
 
-Target type: EventBridge API destination 
+Connection name: a connection name
 
-API destination: select an existing API destination or create a new one 
+Destination type: Other
 
-Name: API destination name 
+Authorization type: API Key
 
-API destination endpoint: Workflow Webhook URL copied from Spot Connect AWS Health trigger node 
+API key name: x-api-key
 
-HTTP method: POST 
+Value: copy from Spot Connect AWS Health trigger node Webhook API Key Value
 
-Connection type: select an existing connection or create a new one 
+Execution role: Create a new role for this specific resource
 
-Connection name: a connection name 
+Keep the default role name
 
-Destination type: Other 
+Review settings and create the rule.
 
-Authorization type: API Key 
+Workflow Execution
 
-API key name: x-api-key 
+Spot Connect AWS Health workflow will be triggered when an EventBridge event for Health occurs.
 
-Value: copy from Spot Connect AWS Health trigger node Webhook API Key Value 
-
-Execution role: Create a new role for this specific resource 
-
-Keep the default role name 
-
- 
-
- 
-
-Review settings and create the rule. 
-
-Workflow Execution 
-
-Spot Connect AWS Health workflow will be triggered when an EventBridge event for Health occurs. 
-
- 
-
-Select Executions in the left navigation to view workflow executions. 
-
- 
-
-  
-
- 
-
- 
-
-
+Select Executions in the left navigation to view workflow executions.

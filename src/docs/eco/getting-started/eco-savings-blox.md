@@ -3,6 +3,7 @@
 Eco Savings Blox is a method of providing qualified customers with deep, targeted savings. To obtain the savings, a customer commits to a per-region, on-demand equivalent for which Eco guarantees reasonable coverage.
 
 ## Prerequisites
+
 - Connect to Cloud Analyzer.
 - Eco Savings Blox is currently available only to [AWS in India (“AISPL”)](https://aws.amazon.com/premiumsupport/knowledge-center/what-is-aispl/) customers.
 - Engage with your Spot representative to review your usage and provide a proposal.

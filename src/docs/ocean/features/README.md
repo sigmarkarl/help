@@ -19,11 +19,11 @@ These are the major Ocean cross-platform features:
 
 These features are only available for Ocean AWS Kubernetes:
 
-*  [Elastic IP](ocean/features/elastic-ip)
-*  [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
-*  [EKS AMI Auto Update](ocean/features/eks-auto-ami)
-*  [Upgrade Kubernetes Version in an Ocean EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
-*  [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
+- [Elastic IP](ocean/features/elastic-ip)
+- [Distribute Nodes by vCPU](ocean/features/distribute-vcpu)
+- [EKS AMI Auto Update](ocean/features/eks-auto-ami)
+- [Upgrade Kubernetes Version in an Ocean EKS Cluster](ocean/tutorials/upgrade-kubernetes-eks)
+- [Set up Extended Resource Support](ocean/tutorials/set-up-extended-resource-support)
 
 </details><br>
 
@@ -48,8 +48,8 @@ These features are only available for Ocean AKS:
 
 These features are only available for Ocean GKE:
 
-*  [Auto Update Process for GKE](ocean/features/auto-update-process-gke)
-*  [Create a Cluster for GKE Using Shared VPC](tutorials/create-cluster-gke-shared-vpc)
+- [Auto Update Process for GKE](ocean/features/auto-update-process-gke)
+- [Create a Cluster for GKE Using Shared VPC](tutorials/create-cluster-gke-shared-vpc)
 
 </details><br>
 
@@ -60,10 +60,10 @@ These features are only available for Ocean GKE:
 
 These features are only available for Ocean AWS ECS:
 
-*  [Scaling for ECS](ocean/features/scaling-ecs)
-*  [Cost Analysis per ECS Service](ocean/features/cost-analysis)
-*  [Migrate Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
-*  [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
+- [Scaling for ECS](ocean/features/scaling-ecs)
+- [Cost Analysis per ECS Service](ocean/features/cost-analysis)
+- [Migrate Elastigroups to Ocean (ECS)](ocean/tutorials/migrate-existing-egs-ecs)
+- [Connect a Fargate Service](elastigroup/tutorials/amazon-ecs/import-fargate-services-to-ecs-elastigroup)
 
 </details><br>
 

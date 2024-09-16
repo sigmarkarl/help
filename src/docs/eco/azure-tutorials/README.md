@@ -21,5 +21,3 @@ Based on those analytics and strategies, Eco helps you build and manage your por
 ## What's Next?
 
 This section includes information you need to optimize your reserved instance and savings plan portfolio.
-
-

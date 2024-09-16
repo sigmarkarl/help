@@ -60,7 +60,7 @@ In an Ocean cluster, you can also see information in the Pods tab about scaling 
 
 ### Pod Details
 
-Note: To view your **static pods** (also known as standalone pods), filter the pod list by **Controller Kind: Node**. 
+Note: To view your **static pods** (also known as standalone pods), filter the pod list by **Controller Kind: Node**.
 
 For a drill-down of more detail about the constraints on a specific pod, click on the Pod Name. In the pod details, you will see a list of scaling restrictions applied to that pod.
 

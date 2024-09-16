@@ -22,13 +22,13 @@ You can use the Ocean APIs to set up Ocean to use the extended resources feature
 
 ```json
 {
-    "extendedResourceDefinition": {
-        "name": "spot.io/myGpu",
-        "mapping": {
-            "c3.large": "1",
-            "c5.large": "3"
-        }
+  "extendedResourceDefinition": {
+    "name": "spot.io/myGpu",
+    "mapping": {
+      "c3.large": "1",
+      "c5.large": "3"
     }
+  }
 }
 ```
 

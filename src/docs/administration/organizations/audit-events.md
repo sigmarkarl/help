@@ -41,4 +41,5 @@ You can search for events by entering free text in the Search filter or by enter
 <img src="/administration/_media/audit-events-04.png" width="250" height="230" />
 
 ## What’s Next?
+
 View the [details](administration/organizations/billing-details) of your monthly bill.

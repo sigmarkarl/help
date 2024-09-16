@@ -4,7 +4,7 @@ Elastigroup Stateful Node enables you to run stateful applications on stateful n
 
 Spot nodes are transient and can be interrupted at any moment by AWS. While this is not an issue for stateless applications, as they are designed to easily scale horizontally, this can be challenging for stateful applications.
 
-Spot Stateful Nodes are designed to support any fault-tolerant applications, such as databases and stream-processing servers.  The following are some examples of stateful node uses.
+Spot Stateful Nodes are designed to support any fault-tolerant applications, such as databases and stream-processing servers. The following are some examples of stateful node uses.
 
 ## Development machines
 

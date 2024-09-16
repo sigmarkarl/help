@@ -14,7 +14,7 @@ For a given organization:
 
 ## Permission
 
-Only a Spot organization administrator can create or delete a subset. 
+Only a Spot organization administrator can create or delete a subset.
 
 ## Create a Subset
 

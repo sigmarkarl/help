@@ -5,9 +5,10 @@
 ## Introduction
 
 You can include or exclude certain instance types in your Ocean cluster. Typically, you do it from the cluster configuration.
-* **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
-* **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
-* **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
+
+- **Blacklist**: instance types to block launching in the Ocean cluster. It cannot be used with a permit list.
+- **Whitelist**: instance types allowed in the Ocean cluster. It cannot be used with a deny list.
+- **Filtering**: list of filters. The instance types that match with all filters make up the Ocean's whitelist parameter. Filtering cannot be used with allow or block lists.
 
 ## Instructions
 

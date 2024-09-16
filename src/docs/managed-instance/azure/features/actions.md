@@ -25,7 +25,8 @@ This action starts the node after it was paused. When this action is used, the n
 ### Delete
 
 Using this action, you can choose to terminate the VM, delete disks, delete snapshots, and delete the public IP.
-- When Terminate VM is **not** marked,  the only other option you can mark is Delete snapshots.
+
+- When Terminate VM is **not** marked, the only other option you can mark is Delete snapshots.
 - When Delete public IP is marked, Delete network interfaces is marked automatically and cannot be unmarked.
 
 <img src="/elastigroup/_media/azure-stateful-node-actions-02a.png" width="350"/>

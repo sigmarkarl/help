@@ -40,7 +40,7 @@ The Workloads area shows your services and workloads where you can achieve the m
 
 ### Filter by Services
 
-The row of tiles shows savings data for each of the services and is in descending order from the left,  with the greatest potential savings on the far left.
+The row of tiles shows savings data for each of the services and is in descending order from the left, with the greatest potential savings on the far left.
 
 The table below lists the workloads, and by default, the 10 workloads with the most savings to gain are listed first.
 

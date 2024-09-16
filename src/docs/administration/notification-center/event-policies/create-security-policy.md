@@ -18,16 +18,17 @@ To access the notification policies, do the following:
 ### Create New Policy
 
 1. In the Create Policy popup, enter the following information:
-* Policy Name: Give the policy a name.
-* Policy Type: In the dropdown, choose Security.
-* Policy Description: Enter a few words describing what or who the policy is for.
+
+- Policy Name: Give the policy a name.
+- Policy Type: In the dropdown, choose Security.
+- Policy Description: Enter a few words describing what or who the policy is for.
 
 <img src="/administration/_media/create-security-policy-2.png" width="400" />
 
 2. Mark Personal policy if you want the policy to be visible only to you. You will not be able to add integrations. If you leave the checkbox blank, the policy will be available to other members of the account it is in, and you will be able to add integrations.
 3. Click Continue.
 
-To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you might need to edit it to select users who will have access.  
+To complete the policy definition, you will need to complete all parts of the wizard to select an account, rules, regions, and integrations. Once the policy is created, you might need to edit it to select users who will have access.
 
 ## Step 1: Select Account
 
@@ -47,7 +48,7 @@ You can turn on the Future Assets toggle if you select All Assets across the sel
 
 ## Step 3: Select Security Rules
 
-Choose the security rules that you want to generate security events from the Rules list.  
+Choose the security rules that you want to generate security events from the Rules list.
 
 <img src="/administration/_media/create-security-policy-11.png"  />
 
@@ -61,17 +62,17 @@ If you (an Admin user) are configuring a policy at the Account level, you can se
 
 The following integrations are available:
 
-* External Email: Add email addresses that will receive notifications.
+- External Email: Add email addresses that will receive notifications.
 
-The following attributes will be sent as part of the CSV attached in the external email:  
+The following attributes will be sent as part of the CSV attached in the external email:
 
-* Security Rule	 
-* Asset Name	 
-* Asset ID	 
-* Asset Type
-* Cloud
-* Cloud Account ID
-* Region
+- Security Rule
+- Asset Name
+- Asset ID
+- Asset Type
+- Cloud
+- Cloud Account ID
+- Region
 
 ## Select Users
 

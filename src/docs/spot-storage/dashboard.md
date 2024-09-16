@@ -50,6 +50,7 @@ In addition, Spot displays that amount you can save over the next month by delet
 #### Unattached Volumes Table
 
 This table displays the full list of unattached volumes recommended for removal. Use the filter to display only a subset of unattached volumes or to search for a specific volume.
+
 - Click the Volume ID to see more detailed information about a volume. This will take you to the detailed Volume page in the AWS console.
 - Click Download to CSV to download the list of volumes. This will download the full list of volumes recommended to a comma separated list in a text file.
 
@@ -64,7 +65,7 @@ Spot identifies your EBS types and recommends suitable EBS types that would cost
 <img src="/spot-storage/_media/dashboard-n007.png" />
 
 2. To modify one or more volumes, mark the checkboxes on the left and click Apply Modifications.
-3, You will be prompted to confirm the volumes you want to modify. Enter the requested information and click Yes, Modify. The Unoptimized EBS Type table, opened to the Optimization Status view, will then appear.
+   3, You will be prompted to confirm the volumes you want to modify. Enter the requested information and click Yes, Modify. The Unoptimized EBS Type table, opened to the Optimization Status view, will then appear.
 
 #### Unoptimized EBS Type Table: Optimization Status View
 
@@ -93,6 +94,7 @@ The bar chart shows you the potential savings you could achieve in each region w
 <img src="/spot-storage/_media/dashboard-n009.png" />
 
 When you hover the mouse over a bar, the details of that region are displayed, including:
+
 - Estimated monthly savings
 - Number of EBS volumes
 - Total amount of storage allocated to you (Allocated size)

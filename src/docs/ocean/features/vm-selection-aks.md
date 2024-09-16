@@ -1,6 +1,6 @@
-#  Select VMs for an AKS Virtual Node Group
+# Select VMs for an AKS Virtual Node Group
 
-Cloud service provider relevance: <font color="#FC01CC">AKS</font> 
+Cloud service provider relevance: <font color="#FC01CC">AKS</font>
 
 This topic describes selecting VM sizes in your cluster per Virtual Node Group (custom or template) according to your application needs. An advanced attributes filter lets you search for the optimal VMs for the task from any of the VM families available on the [Azure cloud](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). Once you have sized your VMs, Ocean can use your customization for its scaling processes.
 
@@ -10,7 +10,7 @@ To select the VMs for your Cluster:
 
 2. Select a cluster from the list of clusters.
 
-3. Click the  **Virtual Node Groups** tab.
+3. Click the **Virtual Node Groups** tab.
 
 4. In the panel on the top left of the screen, fill in and select settings for the Virtual Node Group, such as Availability Zones and the maximum Number of pods per node.
 
@@ -20,8 +20,8 @@ To select the VMs for your Cluster:
 
 The VM Selection panel provides these options:
 
-* Automatic: Let Spot select your VM sizes according to the needs of your applications.
-* Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
+- Automatic: Let Spot select your VM sizes according to the needs of your applications.
+- Advanced VM Size Selection: Use attribute filters to select VMs with customized sizes from which Ocean can scale.
 
  <ol style="list-style-type: lower-alpha;">
   <li>Select an option.</li>
@@ -46,9 +46,7 @@ The VM Selection panel provides these options:
 
 6. Click **Apply** to filter the VM Selection list. All your filters are applied to the VM list. A color-coded bar appears above the list to provide a rating for the applied filter.
 
->**Note**: An error is displayed if you define an incorrect VM type.
+> **Note**: An error is displayed if you define an incorrect VM type.
 
 7. Repeat the previous steps until you are satisfied with the results.
 8. Save the changes for the Virtual Node Group.
-
-

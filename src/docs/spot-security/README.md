@@ -6,7 +6,7 @@ Using its methodology of Analyze, Detect, and Act, Spot Security enables you to 
 
 ## Security Challenge on the Public Cloud
 
-Public clouds are elastic in nature, leading to an ever changing dynamic environment and making it difficult to fully understand and control. Keeping up with your infrastructure and its security is impossible without automation. Basic controls such as data and resources showing public exposures or misconfigurations are not readily available. With millions of events occurring every day, a massive effort is required to sift through the noise and understand your security posture.  
+Public clouds are elastic in nature, leading to an ever changing dynamic environment and making it difficult to fully understand and control. Keeping up with your infrastructure and its security is impossible without automation. Basic controls such as data and resources showing public exposures or misconfigurations are not readily available. With millions of events occurring every day, a massive effort is required to sift through the noise and understand your security posture.
 
 ## Spot Security Solution
 
@@ -23,4 +23,5 @@ As your cloud changes, this process repeats itself continuously to support your 
 To take advantage of the Spot Security features, simply log into your existing Spot account and click Security on the side bar. For no cost and without any changes to your current Spot configuration, you will be able to get a set of initial security insights that we gather from your environment. To enable all the security features, simply click Subscribe, and you will complete a guided process to update your Spot policy. After a few minutes, all the security findings will be available. Detecting anomalies and drift requires additional data, and should be available within a few days.
 
 ## What’s Next?
-Learn how to [get started](spot-security/getting-started/) on using Spot Security. 
+
+Learn how to [get started](spot-security/getting-started/) on using Spot Security.

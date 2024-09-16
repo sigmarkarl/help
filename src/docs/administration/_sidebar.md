@@ -11,7 +11,7 @@
     - [Edit Group Details](administration/groups/edit-group-details)
   - [Permission Policies](administration/policies/)
     - [Create New Policy](administration/policies/create-new-policy)
-    - [Edit Policy Details](administration/policies/edit-policy-details)  
+    - [Edit Policy Details](administration/policies/edit-policy-details)
   - [Organizations & Accounts](administration/organizations/)
     - [Switch Organization](administration/organizations/switch-organization)
     - [Audit Events](administration/organizations/audit-events)

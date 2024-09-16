@@ -1,6 +1,7 @@
 # Create New Group
 
 The Create New [Group](administration/groups/) wizard consists of the following major steps:
+
 1. Add Group Details
 2. Add Users
 3. Attach Permission Policies
@@ -22,6 +23,7 @@ The Create New Group wizard appears and displays the Group Details page.
 ## Add Group Details
 
 In the Create New Group popup, complete the required information and then click Continue.
+
 - Group Name: The name of the group. This should relate to the permission level or organizational placement of the group, e.g., Viewers, Eco Users, QC users, etc.
 - Description: A few words describing the purpose of the group.
 
@@ -30,6 +32,7 @@ In the Create New Group popup, complete the required information and then click 
 ## Add Users
 
 There are several ways you can add [users](administration/users-a/) to a group:
+
 - When you create the group, as shown in the illustration below.
 - When you edit the group, after the group has been created.
 - When you are adding a new user or editing a user.

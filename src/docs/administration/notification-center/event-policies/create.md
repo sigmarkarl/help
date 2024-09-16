@@ -21,6 +21,7 @@ In the Create New Policy popup, your user name (i.e., your company email address
 <img src="/administration/_media/create-new-notification-policy-01a.png" width="500" />
 
 1. In the Create Policy window, complete the following information:
+
    - Policy Name: Give the policy a name.
    - Policy Type: In the dropdown, choose Compute.
    - Policy Description: Enter a few words describing what or who the policy is for.

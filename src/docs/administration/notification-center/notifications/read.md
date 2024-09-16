@@ -47,6 +47,7 @@ The notifications show one line of text. Click the message to see the full body 
 ## Filters
 
 There are several options for filtering notifications.
+
 - Enter text or key words in the Filter field to filter by topic, type, or content of the messages.
 - Enter a date range to narrow the filter to specific dates.
 - Click the flag icon to filter by notifications that have been flagged.

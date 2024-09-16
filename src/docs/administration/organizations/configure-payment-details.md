@@ -27,4 +27,5 @@ The following credit cards are accepted:
 - Visa
 
 ## What’s Next
+
 View your [billing details](administration/organizations/billing-details).

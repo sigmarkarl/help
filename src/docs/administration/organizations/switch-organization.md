@@ -13,4 +13,5 @@ If your user is mapped to more than one organization, you can easily switch from
 Spot will then switch to the organization you chose.
 
 ## What’s Next
+
 Learn how to [audit your events](administration/organizations/audit-events).

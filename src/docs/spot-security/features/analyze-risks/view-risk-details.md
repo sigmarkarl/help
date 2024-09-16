@@ -13,7 +13,7 @@ To access the Risk Details page for a risk, do one of the following:
 
 ## Risk Impact Map
 
-The risk impact map illustrates the relations of the various services, policies, instances, and other entities that are impacted by the risk. You can further see how the asset can be reached via public access by seeing which of its connected assets or protocols are internet facing. You can also use the search tool at the top of the map to search any asset by node name, connection, hostname, database, type, port, or username.   
+The risk impact map illustrates the relations of the various services, policies, instances, and other entities that are impacted by the risk. You can further see how the asset can be reached via public access by seeing which of its connected assets or protocols are internet facing. You can also use the search tool at the top of the map to search any asset by node name, connection, hostname, database, type, port, or username.
 
 <img src="/spot-security/_media/view-risk-details-d.png" />
 

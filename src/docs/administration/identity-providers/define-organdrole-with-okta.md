@@ -5,6 +5,7 @@ This page describes how to create multiple organization and role (OrgAndRole) de
 ## Prerequisites
 
 Before you begin the procedure, you will need:
+
 - Okta SSO connected to Spot (i.e., completed configuration in [Okta SAML Authentication](administration/identity-providers/okta-saml-authentication)).
 - Two or more organizations existing in Spot
 
@@ -21,6 +22,7 @@ Before you begin the procedure, you will need:
 ## Step 1: Add Organization and Role Values
 
 Scroll down to Attributes (optional) and click Add Another. Enter the following information:
+
 - Name: OrgAndRole
 - Name Format: Leave as Unspecified
 - Value: Enter multiple values in the format shown below. Values are separated by a comma.
@@ -29,7 +31,7 @@ Scroll down to Attributes (optional) and click Add Another. Enter the following 
 SPOTINST-<your Organization ID>-<Role>,SPOTINST-<another Organization ID>-<Role>
 ```
 
-Example:  
+Example:
 
 ```
 SPOTINST-12121212121417-ADMIN,SPOTINST-12121212121418-ADMIN
@@ -40,14 +42,16 @@ SPOTINST-12121212121417-ADMIN,SPOTINST-12121212121418-ADMIN
 When you are finished adding the OrgAndRole details, click Save.
 
 ## Step 2: Download SAML Signing Cerficate
-1. Scroll down to SAML Signing Certificates and click Actions of the Active certificate.  
-2. Right-click View IdP Metadata and choose Save Link as...  When you save, you must manually enter the file format extension (.XML).
+
+1. Scroll down to SAML Signing Certificates and click Actions of the Active certificate.
+2. Right-click View IdP Metadata and choose Save Link as... When you save, you must manually enter the file format extension (.XML).
 
 <img src="/administration/_media/define-organdrole-with-okta-04.png" width="600" />
 
 ## Step 3: Upload Certificate to Spot Organizations
 
 For each of your organizations in Spot, do the following:
+
 1. Log in to your Spot organization as an administrator.
 2. In the Spot console, go to the User menu and click Settings.
 

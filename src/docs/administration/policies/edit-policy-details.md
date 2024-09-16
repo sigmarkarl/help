@@ -13,6 +13,7 @@ Once you have [created a permission policy](administration/policies/create-new-p
 <img src="/administration/_media/edit-policy-01.png" />
 
 ## Edit Policy Details
+
 In the edit page, you can modify all the information about the policy except for the policy type and the policy ID. You can modify existing services or add new ones.
 
 <img src="/administration/_media/edit-policy-02.png" />

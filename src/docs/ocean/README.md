@@ -11,13 +11,13 @@ Ocean lets you focus on your workloads, not your infrastructure:
 
 ## Connect Your Cloud Provider Account
 
-If you have not yet connected Spot with your Cloud provider account, connect now: <font color="#FC01CC">[AWS](connect-your-cloud-provider/aws-account)</font>, <font color="#FC01CC">[Azure](connect-your-cloud-provider/azure-account)</font>, <font color="#FC01CC">[GCP](connect-your-cloud-provider/gcp-project)</font>. 
+If you have not yet connected Spot with your Cloud provider account, connect now: <font color="#FC01CC">[AWS](connect-your-cloud-provider/aws-account)</font>, <font color="#FC01CC">[Azure](connect-your-cloud-provider/azure-account)</font>, <font color="#FC01CC">[GCP](connect-your-cloud-provider/gcp-project)</font>.
 
 ## Get Started With An Ocean Cluster
 
 Once you have connected your account, get started with an Ocean cluster.
 
-Select a method to create an Ocean-managed cluster: 
+Select a method to create an Ocean-managed cluster:
 
 - EKS
   - [Connect an Existing Cluster](/ocean/getting-started/eks/join-an-existing-cluster)

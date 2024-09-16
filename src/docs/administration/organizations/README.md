@@ -79,4 +79,5 @@ The Account ID is required for API and SDK interactions with the Elastigroup con
 The Account ID is required for any API call or SDK call unless it is for the default Account.
 
 ## What’s Next
+
 Learn how to [switch organizations](administration/organizations/switch-organization).

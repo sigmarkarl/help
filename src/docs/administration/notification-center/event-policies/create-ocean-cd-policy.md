@@ -17,9 +17,9 @@ To access the notification policies, do the following:
 
 In the Create Policy window, complete the following information:
 
-* Policy Name: Give the policy a name.
-* Policy Type: In the dropdown menu, choose Ocean CD.
-* Policy Description: Enter a short description of what or who the policy is for.
+- Policy Name: Give the policy a name.
+- Policy Type: In the dropdown menu, choose Ocean CD.
+- Policy Description: Enter a short description of what or who the policy is for.
 
 <img src="/administration/_media/notifications-ocean-cd-4.png" />
 
@@ -29,7 +29,7 @@ In the Create Policy window, complete the following information:
 
 ## Step 1: Select Resources
 
-Select resource types for the policy and click Next. You can select three types of notifications you want to receive: notifications for [clusters](ocean-cd/tutorials/view-settings/?id=clusters), [rollouts](ocean-cd/tutorials/view-rollouts/) or [entities](ocean-cd/getting-started/rollout-entities/).  
+Select resource types for the policy and click Next. You can select three types of notifications you want to receive: notifications for [clusters](ocean-cd/tutorials/view-settings/?id=clusters), [rollouts](ocean-cd/tutorials/view-rollouts/) or [entities](ocean-cd/getting-started/rollout-entities/).
 
 <img src="/administration/_media/notifications-ocean-cd-1.png" />
 
@@ -39,9 +39,9 @@ Select the events you want to include in your policy according to their resource
 
 <img src="/administration/_media/notifications-ocean-cd-2.png" />
 
-If you want to add integrations to your policy to get notifications of the clusters, rollouts or entities, click Next (Optional).  
+If you want to add integrations to your policy to get notifications of the clusters, rollouts or entities, click Next (Optional).
 
-If you do not want to add notifications and complete the policy creation process, click Create Policy Now.    
+If you do not want to add notifications and complete the policy creation process, click Create Policy Now.
 
 ## Step 3: Add Integrations (Optional)
 

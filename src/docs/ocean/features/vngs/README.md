@@ -102,19 +102,17 @@ Ocean takes the following parameters from the default Virtual Node Group unless 
 
 </details><br>
 
-
 <details>
   <summary markdown="span">AKS</summary>
 
- - Kubernetes Version
- - Automatic and Advanced VM Size Selection
- - Availability zone (1,2,3 +0 )
- - Root volume type
- - OS SKU type
- - Max pods per VM
+- Kubernetes Version
+- Automatic and Advanced VM Size Selection
+- Availability zone (1,2,3 +0 )
+- Root volume type
+- OS SKU type
+- Max pods per VM
 
- </details><br> 
-
+ </details><br>
 
 ## Learn more about:
 

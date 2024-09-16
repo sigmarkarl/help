@@ -38,15 +38,14 @@ You will need to configure several items as described below.
 ```yaml
 {
   "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "resources.cloudformation.amazonaws.com"
+  "Statement":
+    [
+      {
+        "Effect": "Allow",
+        "Principal": { "Service": "resources.cloudformation.amazonaws.com" },
+        "Action": "sts:AssumeRole",
       },
-      "Action": "sts:AssumeRole"
-    }
-  ]
+    ],
 }
 ```
 

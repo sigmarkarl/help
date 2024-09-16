@@ -21,6 +21,7 @@ The User Details page appears with a summary line of information about the user 
 ### User Details Summary Line
 
 The following user details are displayed:
+
 - User Name
 - Type
 - Email (only for console users)
@@ -36,6 +37,7 @@ For each group, two policies are shown in the table, and the number of additiona
 <img src="/administration/_media/edit-user-details-03.png" />
 
 To add or remove groups associated with the user, do the following:
+
 1. Above the table on the right, click Manage.
 2. In the Manage Groups popup, mark or unmark groups as needed, then click Update.
 
@@ -48,6 +50,7 @@ Under the Policies tab is a listing of policies associated with the user. For ea
 <img src="/administration/_media/edit-user-details-05.png" />
 
 If you need to associate additional policies with the user, do the following:
+
 1. Above the table on the right, click Manage.
 2. Select the name of the policy from the dropdown list. Note that the dropdown list doesn’t include the policies the user inherited from the groups. If you wish to remove an ‘inherited’ policy, you must un-assign the user from the group or remove the policy from the group itself.
 3. If the policy is at account level, you need to select at least one account to associate with this policy.
@@ -65,6 +68,7 @@ You can [create and delete](https://docs.spot.io/administration/api/create-api-t
 ## Remove User
 
 To remove a user from Spot, do the following:
+
 1. In the upper right of the User Details page, click Remove User.
 2. In the popup that appears, confirm that you want to remove the user from Spot.
 

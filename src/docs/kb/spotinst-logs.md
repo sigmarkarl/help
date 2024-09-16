@@ -6,11 +6,12 @@ You can stop log messages from saving in `/lib/systemd/system/spotinst-agent.ser
 
 You can run this script to stop Spotinst-Agent from sending logs to syslog:
 
-````
+```
 sed -i 's/[Service]/[Service]\nStandardOutput=null\nStandardError=null/g' /lib/systemd/system/spotinst-agent.service
 systemctl daemon-reload
 systemctl restart spotinst-agent
-````
+```
+
 <font color="#FC01CC">Isn’t this restarting the service?</font>
 
 ~~And then restart the service~~

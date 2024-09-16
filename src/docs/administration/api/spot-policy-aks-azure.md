@@ -1,5 +1,7 @@
 # Spot Policy in Azure (AKS)
+
 The latest Spot policy in Azure appears below.
+
 ```
 {
     "properties": {
